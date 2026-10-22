@@ -16,5 +16,5 @@ public class Session extends BaseModel{
 
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
-    private String token;
+    private String sessionId;
 }

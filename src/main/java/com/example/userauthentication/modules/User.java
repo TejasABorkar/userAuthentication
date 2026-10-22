@@ -9,7 +9,7 @@ import lombok.Setter;
 
 @Entity
 public class User extends BaseModel{
-    private String username;
+    private String emailId;
     private String password;
     private String fullname;
 }

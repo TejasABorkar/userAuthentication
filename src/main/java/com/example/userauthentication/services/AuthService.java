@@ -9,11 +9,9 @@ public interface AuthService {
 
     public Optional<User> getUserById(Long user_id);
 
-    public User getUserByUserName(String UserName);
+    public User getUserByEmailId(String emailId);
 
-    public User createUser(String username, String password);
-
-    public String updateUserName(Long user_id , String newName);
+    public String updateEmailId(Long user_id , String emailId);
 
     public String updatePassword(Long user_id , String newPassword);
 
