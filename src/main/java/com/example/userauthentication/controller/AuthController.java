@@ -20,5 +20,4 @@ public class AuthController {
     public UserResponseDto login(@RequestBody LoginRequestDto request) {
         return authService.login(request.getEmailId(), request.getPassword());
     }
-
 }
