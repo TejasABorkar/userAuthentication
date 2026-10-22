@@ -50,8 +50,14 @@ public class AuthServiceImpl implements AuthService {
         response.setToken(session.getToken());
         return response;
     }
-
+    //5) generate token id / session id
     private String generateToken() {
+
         return UUID.randomUUID().toString().replace("-", "").substring(0, 20);
+    }
+
+    @Override
+    public boolean validate(String token) {
+        return sessionRepository.findByToken(token).isPresent();
     }
 }
