@@ -1,5 +1,6 @@
 package com.example.userauthentication.modules;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToOne;
@@ -11,10 +12,13 @@ import java.util.Timer;
 @Getter
 @Setter
 
-@Entity
-public class Session extends BaseModel{
 
-    @ManyToOne(fetch = FetchType.LAZY)
+@Entity
+public class Session extends BaseModel {
+
+    @ManyToOne
     private User user;
-    private String sessionId;
+
+    @Column(unique = true, nullable = false)
+    private String token;
 }

@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 
 public class UserResponseDto {
-    private User user;
+
     private Long userId;
     private String token;
 }
